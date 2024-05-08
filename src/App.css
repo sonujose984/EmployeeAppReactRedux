@@ -1,5 +1,21 @@
-.table th {
-  background-color: #007bff; /* Standard color for table headings */
-  font-weight: bold; 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #a7a8a5;
+  color: rgb(201, 194, 194);
+  flex-direction: column;
+}
+
+.main-header {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.create-form label {
+  color: rgb(212, 197, 197) !important;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px !important;
 }

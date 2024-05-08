@@ -1,40 +1,22 @@
 {
   "employee": [
     {
-      "id": "23",
-      "name": "tes",
+      "id": "6",
+      "name": "Sonu",
+      "department": "Development",
+      "age": "45",
+      "gender": "Female",
+      "salary": "32435",
+      "yearsOfExperience": "6"
+    },
+    {
+      "id": "2",
+      "name": "Sample",
       "department": "Development",
       "age": "3",
-      "gender": "Female",
-      "salary": "4340",
+      "gender": "Male",
+      "salary": "3432",
       "yearsOfExperience": "4"
-    },
-    {
-      "id": "6",
-      "name": "Remya Ramachandran Pillai",
-      "department": "Development",
-      "age": "45",
-      "gender": "Male",
-      "salary": "32435",
-      "yearsOfExperience": "45"
-    },
-    {
-      "id": "45",
-      "name": "tryr",
-      "department": "Testing",
-      "age": "45",
-      "gender": "Male",
-      "salary": "645645",
-      "yearsOfExperience": "45"
-    },
-    {
-      "id": "56",
-      "name": "try redux add",
-      "department": "Development",
-      "age": "34",
-      "gender": "Male",
-      "salary": "3253",
-      "yearsOfExperience": "3"
     }
   ]
 }

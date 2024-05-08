@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import {addEmployee} from '../action';
+import { addEmployee } from '../action';
 import { useDispatch } from 'react-redux';
 
 const EmpCreate = () => {
@@ -19,7 +19,7 @@ const EmpCreate = () => {
 
 
 
-    const handleSubmit = async  (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (!id || !name || !department || !age || !gender || !salary || !yearsOfExperience) {
             setValidation(true);
@@ -38,7 +38,7 @@ const EmpCreate = () => {
 
         try {
 
-            const response = await axios.post('http://localhost:3001/employee', empData);       
+            const response = await axios.post('http://localhost:3001/employee', empData);
             dispatch(addEmployee(response.data));
             resetForm();
             navigate('/');
@@ -59,14 +59,14 @@ const EmpCreate = () => {
 
     return (
         <div>
- 
-          
+
+
             <div className="row">
                 <div className="offset-lg-3 col-lg-6">
                     <form className="container" onSubmit={handleSubmit}>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div style={{ "textAlign": "center", color: 'black' }}>
-                                <h2>Employee Create</h2>
+                                <h2>Create Employee Details</h2>
                             </div>
                             <div className="card-body">
                                 <div className="row">
@@ -125,10 +125,10 @@ const EmpCreate = () => {
                                             <input value={yearsOfExperience} onChange={(e) => setYearsOfExperience(e.target.value)} className="form-control"></input>
                                         </div>
                                     </div>
-                                    <div className="col-lg-12" style={{ paddingTop: '50px'}}>
-                                        <div className="form-group">
-                                            <button className="btn btn-success" type="submit">Save</button>
-                                            <Link to="/" className="btn btn-danger">Back</Link>
+                                    <div className="col-lg-12" >
+                                        <div className="form-group pt-3" style={{ display: 'flex', gap: '10px' }}>
+                                            <button className="btn btn-success btn-sm" type="submit">Save</button>
+                                            <Link to="/" className="btn btn-secondary btn-sm">Close</Link>
                                         </div>
                                     </div>
                                 </div>
@@ -137,7 +137,7 @@ const EmpCreate = () => {
                     </form>
                 </div>
             </div>
-  
+
         </div>
     );
 };

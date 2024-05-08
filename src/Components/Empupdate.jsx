@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import {empupdate} from '../action';
+import { empupdate } from '../action';
 import { connect } from 'react-redux';
 import axios from 'axios';
 
-const EmpUpdate = ({empupdate}) => {
+const EmpUpdate = ({ empupdate }) => {
     const navigate = useNavigate();
     const [id, setId] = useState(null);
     const [name, setName] = useState('');
@@ -41,16 +41,16 @@ const EmpUpdate = ({empupdate}) => {
             yearsOfExperience: yearsOfExperience
         };
 
-       
+
         axios.put(`http://localhost:3001/employee/${id}`, empData)
-        .then((res) => {
-            empupdate(id, empData); 
-            alert('Updated successfully.');
-            navigate('/');
-        })
-        .catch((err) => {
-            console.error('Error:', err.message);
-        });
+            .then((res) => {
+                empupdate(id, empData);
+                alert('Updated successfully.');
+                navigate('/');
+            })
+            .catch((err) => {
+                console.error('Error:', err.message);
+            });
     };
 
     return (
@@ -60,7 +60,7 @@ const EmpUpdate = ({empupdate}) => {
                     <form className="container" onSubmit={handleSubmit}>
                         <div className="card" style={{ "textAlign": "left" }}>
                             <div style={{ "textAlign": "center", color: 'black' }}>
-                                <h2>Employee Update</h2>
+                                <h2>Update Employee Details</h2>
                             </div>
                             <div className="card-body">
                                 <div className="row">
@@ -118,9 +118,9 @@ const EmpUpdate = ({empupdate}) => {
                                         </div>
                                     </div>
                                     <div className="col-lg-12">
-                                        <div className="form-group">
-                                            <button className="btn btn-success" type="submit">Update</button>
-                                            <Link to="/" className="btn btn-danger">Back</Link>
+                                        <div className="form-group pt-3" style={{ display: 'flex', gap: '10px' }}>
+                                            <button className="btn btn-success btn-sm" type="submit">Update</button>
+                                            <Link to="/" className="btn btn-secondary btn-sm">Close</Link>
                                         </div>
                                     </div>
                                 </div>
